@@ -1,0 +1,272 @@
+/* RESET */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(#7a0000, #b30000);
+    color: white;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    gap: 25px;
+    z-index: 1000;
+}
+
+.sidebar h2 {
+    font-size: 30px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #ffd6d6;
+    transform: scale(1.1);
+}
+
+/* MAIN */
+.main {
+    margin-left: 200px;
+}
+
+/* HERO (ARREGLADO) */
+.hero {
+    display: flex;
+    height: 420px;
+    position: relative;
+}
+
+.hero img {
+    width: 50%;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+.hero-text {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+}
+
+.hero-text button {
+    padding: 12px 25px;
+    border: none;
+    background: #ff4d6d;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* TITULO */
+.section-title {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* ✨ UPLOAD */
+.upload {
+    text-align: center;
+    margin: 40px 20px;
+}
+
+/* INPUT */
+.file-input {
+    display: block;
+    margin: 0 auto 15px auto;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+/* BOTÓN */
+.btn-romantico {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ff4d6d, #ff758f);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-romantico:hover {
+    transform: scale(1.08);
+}
+
+/* ESTADO */
+.estado {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ffd6d6;
+    animation: parpadeo 1s infinite;
+}
+
+@keyframes parpadeo {
+    0% { opacity: 0.3; }
+    50% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+
+/* GALERIA */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+.gallery img {
+    width: 200px;
+    height: 250px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* BOTÓN ELIMINAR */
+.delete-btn {
+    margin-top: 8px;
+    padding: 6px 12px;
+    border: none;
+    background: rgba(255, 0, 60, 0.8);
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* HISTORIA (ARREGLADO) */
+.story {
+    display: flex;
+    margin: 40px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.video {
+    width: 50%;
+    object-fit: cover;
+}
+
+.story-text {
+    padding: 25px;
+}
+
+.extra-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* 💖 CORAZONES */
+.corazones {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.corazones span {
+    position: absolute;
+    bottom: -50px;
+    animation: subir 6s linear infinite;
+}
+
+@keyframes subir {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-500px); opacity: 0; }
+}
+
+/* 💬 CHAT */
+.chat-box {
+    background: rgba(0,0,0,0.3);
+    height: 300px;
+    overflow-y: scroll;
+    padding: 10px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* MENSAJES */
+.mensaje {
+    max-width: 60%;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 15px;
+}
+
+.mio {
+    background: #ff4d6d;
+    align-self: flex-end;
+}
+
+.otro {
+    background: rgba(255,255,255,0.2);
+    align-self: flex-start;
+}
+
+/* LOGIN */
+.login-container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .main {
+        margin-left: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .story {
+        flex-direction: column;
+    }
+
+    .video {
+        width: 100%;
+    }
+}
